@@ -1,8 +1,8 @@
 vim.cmd [[
 	set number
 	set clipboard=unnamedplus
-	set tabstop=4
-	set shiftwidth=4
+	set tabstop=2
+	set shiftwidth=2
 	set expandtab
 ]]
 
@@ -83,3 +83,4 @@ require('treesitter_config')
 require('cmp_config')
 require('gitsigns_config')
 require('telescope_config')
+require('neoformat_config')
