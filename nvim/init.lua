@@ -47,7 +47,7 @@ vim.o.background = 'dark'
 vim.g.lightline = {
   colorscheme = 'moonfly',
   active = { left = { { 'mode', 'paste' }, { 'gitbranch', 'readonly', 'filename', 'modified' } } },
-  component_function = { gitbranch = 'fugitive#head' },
+  component_function = { gitbranch = 'FugitiveHead' },
 }
 
 -- Highlight on yank (copy). It will do a nice highlight blink of the thing you just copied.
