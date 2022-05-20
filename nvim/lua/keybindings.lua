@@ -9,3 +9,5 @@ vim.g.maplocalleader = ' '
 -- Remap for dealing with word wrap. In general, the `nvim_set_keymap` is the function we can use to create any keymap you'd wish. I tend to keep those related to the whole editor here, while leaving the ones for specific plugins to their own configuration files. That way if I ever remove or change plugins I can keep my keybindings clean.
 vim.api.nvim_set_keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { noremap = true, expr = true, silent = true })
 vim.api.nvim_set_keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { noremap = true, expr = true, silent = true })
+
+

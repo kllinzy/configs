@@ -7,21 +7,9 @@ vim.cmd [[
 ]]
 
 
--- Incremental live completion (note: this is now a default on master).
-vim.o.inccommand = 'nosplit'
-
--- Set highlight on search. This will remove the highlight after searching for text.
-vim.o.hlsearch = false
-
 -- Make relative line numbers default. The current line number will be shown as well as relative numbering from that current line. It makes navigating around code easier.
 vim.wo.number = true
 vim.wo.relativenumber = true
-
--- Do not save when switching buffers (note: default on master).
-vim.o.hidden = true
-
--- Enable mouse mode. Sometimes it's easier to scroll using the touchpad for example.
-vim.o.mouse = 'a'
 
 -- Enable break indent.
 vim.o.breakindent = true
@@ -50,6 +38,10 @@ vim.g.lightline = {
   component_function = { gitbranch = 'FugitiveHead' },
 }
 
+-- Set dark theme if macOS theme is dark, light otherwise.
+vim.o.background = 'dark'
+vim.cmd [[colorscheme moonfly]]
+
 -- Highlight on yank (copy). It will do a nice highlight blink of the thing you just copied.
 vim.api.nvim_exec(
   [[
@@ -61,26 +53,13 @@ vim.api.nvim_exec(
   false
 )
 
--- Y yank until the end of line  (note: this is now a default on master)
-vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })
-
--- Set dark theme if macOS theme is dark, light otherwise.
-local theme = vim.fn.system("defaults read -g AppleInterfaceStyle")
-if (string.find(theme, 'Dark')) then
-	vim.o.background = 'dark'
-	vim.cmd [[colorscheme moonfly]]
-else
-	vim.o.background = 'light'
-	vim.cmd [[colorscheme morning]]
-end
 
 require('plugin_config')
-require('lsp_config')
 require('keybindings')
 
 --extension configs
 require('treesitter_config')
-require('cmp_config')
 require('gitsigns_config')
 require('telescope_config')
 require('neoformat_config')
+require('coc_config')
