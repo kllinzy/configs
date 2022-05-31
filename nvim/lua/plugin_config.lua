@@ -31,10 +31,10 @@ require('packer').startup(function()
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } } -- Adds git related info in the signs columns (near the line numbers) and popups.
   use 'nvim-treesitter/nvim-treesitter' -- Highlight, edit, and navigate code using a fast incremental parsing library. Treesitter is used by nvim for various things, but among others, for syntax coloring. Make sure that any themes you install support treesitter!
   use 'nvim-treesitter/nvim-treesitter-textobjects' -- Additional textobjects for treesitter.
-  --use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client.
-  --use 'hrsh7th/nvim-cmp' -- Autocompletion plugin.
-  use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
-  --use 'hrsh7th/cmp-nvim-lsp'
+  use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client.
+  use 'hrsh7th/nvim-cmp' -- Autocompletion plugin.
+  --use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
+  use 'hrsh7th/cmp-nvim-lsp'
   --use 'saadparwaiz1/cmp_luasnip'
   --use 'L3MON4D3/LuaSnip' -- Snippets plugin.
   use 'sbdchd/neoformat'
