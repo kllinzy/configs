@@ -35,11 +35,10 @@ require('packer').startup(function()
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin.
   --use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
   use 'hrsh7th/cmp-nvim-lsp'
-  --use 'saadparwaiz1/cmp_luasnip'
-  --use 'L3MON4D3/LuaSnip' -- Snippets plugin.
+  use 'saadparwaiz1/cmp_luasnip'
+  use { 'L3MON4D3/LuaSnip' }
+  use "rafamadriz/friendly-snippets"
   use 'sbdchd/neoformat'
   use { "nvim-telescope/telescope-file-browser.nvim" }
 end)
 
--- luasnip setup (you can leave this here or move it to its own configuration file in `lua/plugs/luasnip.lua`.)
---luasnip = require 'luasnip'
